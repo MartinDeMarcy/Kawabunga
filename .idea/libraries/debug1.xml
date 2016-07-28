@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="debug1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/debug_b217dcaace81d205375ba77c187f5aa137d07fb7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/android-support-v4_519f0793ba19c8842f87dcd93d980c8c1a8dbb7e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/pushbots-lib-2.0.13_f56d503caf6e31224cf5f05cc19c9adaf3b73bc1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_0c927835c156fa929cc799c163d83ad06f8d5fbe.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,630 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+.background{
+	
+}
+
+
+/* Portrait layout (default) */
+.app {
+   background: url(../img/logo.png) no-repeat center top;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    background-size: 62%;
+    height: 38px;
+    width: 209px;
+    text-align: center;
+    padding: 180px 0px 0px 0px;
+    margin: -115px 0px 0px -112px;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.bloc1{
+	margin-left:200px;
+	margin-right:200px;
+	
+}
+
+img{
+	width:100%;
+	height:auto;
+	
+}
+
+.valeur{
+	left: 15%;
+    position: absolute;
+    top: 23%;
+    width: 20%;
+	
+}
+.competence{
+    right: 20%;
+    top: 23%;
+    width: 20%;
+    position: absolute;
+	
+}
+
+.actualite{
+	position: absolute;
+    left: 5%;
+    width: 20%;
+    bottom: 31%;
+	
+}
+
+.favoris{
+	position: absolute;
+    bottom: 29%;
+    width: 20%;
+    right: 10%;
+}
+
+.solutions{
+	position: absolute;
+    bottom: 22%;
+    width: 20%;
+    left: 37%;
+}
+
+.bando{
+	width:100%;
+	height:13%;
+	display: inline-table;
+	text-align:center;
+	background-color: rgba(219, 232, 251, 0.81);
+}
+
+.case p{
+	position:absolute;
+	left:10%;
+	font-size: -webkit-xxx-large;
+	
+	
+}
+
+.bando p {
+	padding: 8%;
+	font-size: 43px;
+	
+}
+
+.case{
+	width:100%;
+	height: 13%;
+	text-align:center;
+	text-transform:uppercase;
+	border: 1px solid grey;
+	
+}
+
+
+
+.module{
+	width: 100%;
+    background-color: #0A609A;
+    height: 21.2%;
+}
+
+nav {
+  background: url(../img/backmenu.jpg) no-repeat;
+  background-size:100%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+nav ul {
+  width: 250px;
+    top: 24%;
+    left: 18%;
+    position: relative;
+}
+nav ul:hover li {
+  color: rgba(255, 255, 255, 0.5);
+}
+nav ul li {
+  transition-duration: 0.25s;
+    display: block;
+    padding: 53px;
+    font-size: 61px;
+    color: white;
+    letter-spacing: 0.02em;
+	left: 35%;
+	position:relative;
+	
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.openNav {
+  transition-duration: 0.5s;
+  transition-timing-function: swing;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  left:2%;
+  z-index: 9;
+}
+.openNav:hover {
+  cursor: pointer;
+}
+.openNav .icon {
+  transition-duration: 0.2s;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  top: 24px;
+  left: 10px;
+}
+.openNav .icon:before,
+.openNav .icon:after {
+  transition-duration: 0.5s;
+  background-color: white;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  left: 0px;
+}
+.openNav .icon:before {
+  top: -7px;
+}
+.openNav .icon:after {
+  top: 7px;
+}
+
+.openNav.open .icon {
+  background-color: transparent;
+}
+.openNav.open .icon:before,
+.openNav.open .icon:after {
+  top: 0;
+}
+.openNav.open .icon:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.openNav.open .icon:after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+a {
+	text-decoration:none;
+	
+}
+
+.navOpen {
+  overflow: hidden;
+}
+.wrapper {
+  transition-duration: 0.7s;
+  transition-timing-function: swing;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+  overflow-y:auto;
+
+  }
+.wrapper.open {
+  transform: translateX(250px) translateY(50px);
+  -webkit-transform: translateX(87%) translateY(52%);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  bottom: 46%;
+    height: 69%;
+    right: 10%;
+    width: 69%;
+}	
+
+.nextL{
+	font-size: 89px;
+    position: absolute;
+    color: rgba(236, 214, 214, 0.5);
+    font-weight: 100;
+    font-family: monospace;
+	left: 6%;
+    bottom: 78%;
+	
+}
+
+.nextR{
+	font-size: 89px;
+    position: absolute;
+    color: rgba(236, 214, 214, 0.5);
+    font-weight: 100;
+    font-family: monospace;
+    right: 6%;
+    bottom: 78%;
+}
+
+.energie{
+	margin: auto;
+    top: -10%;
+    font-size: 22px;
+    color: white;
+    position: relative;
+    font-family: "Roboto";
+    font-weight: bold;
+    text-align: center;
+	
+}
+
+.def{
+	width: auto;
+    position: absolute;
+    height: 120;
+    left: 8%;
+    top: 8%;
+	
+}
+
+.comp{
+	position: absolute;
+    height: 130px;
+    left: 42%;
+    width: auto;
+    top: 8%;
+	
+	
+}
+
+.fic{
+	position: absolute;
+    /* bottom: 2%; */
+    height: 125;
+    right: 8%;
+    top: 8%;
+    width: auto;
+}
+
+.defp{
+	position: absolute;
+    top: 15%;
+    left: 9%;
+    color: white;
+    font-size: 25px;
+}
+
+.compp{
+	position: absolute;
+    left: 42%;
+    top: 15%;
+    font-size: 25px;
+    color: white;
+	
+}
+
+.ficp{
+	position: absolute;
+    top: 15%;
+    font-size: 25px;
+    color: white;
+    right: 9%;
+	
+}
+
+.dot1{
+	list-style-type: disc;
+    color: white;
+    position: absolute;
+    left: 13%;
+    top: 19%;
+    font-size: 28px;
+}
+
+.dot2{
+	list-style-type: disc;
+    color: white;
+    position: absolute;
+    left: 49%;
+    top: 19%;
+    font-size: 28px;
+}
+
+.dot3{
+	list-style-type: disc;
+    color: white;
+    position: absolute;
+    right: 13%;
+    top: 19%;
+    font-size: 28px;
+}
+
+.case div:active{
+    -webkit-box-shadow: inset -10px 1px 10px 8px rgba(152, 180, 199, 0.65);
+	background-color:white;
+}
+
+.imgvaleur{
+	max-width: 100%;
+    height: 194px;
+    width: auto;
+    position: absolute;
+    left: 37%;
+    top: 7%;
+}
+
+.imgsaur{
+	position: absolute;
+    left: 9%;
+    top: 1%;
+    height: 74px;
+    width: auto;
+}
+
+.titremodule{
+	font-size: 54px;
+    /* text-align: center; */
+    position: relative;
+    bottom: 23%;
+    text-align: center;
+    /* left: 50%; */
+    /* right: 50%; */
+    color: white;
+    font-family: roboto bold;
+}
+
+.ficheslide{
+	height:7.5%;
+	width:100%;
+	background-color:white;
+}
+
+.titrefiche{
+	text-align:center;
+	font-family:roboto bold;
+	font-size:30px;
+	position: relative;
+    top: 27%;
+}
+
+.bookmark{
+	width:100%;
+	height:7.5%;
+	background-color:#29C329;
+}
+
+.bfooter{
+	height: 18%;
+	width:100%;
+	background-color: #0A609A;
+}
+
+.headfiche{
+	background-color: #0A609A;
+	height:7.5%;
+	width:100%;
+}
+
+.bar{
+	height:8.5%;
+	width:100%;
+	background-color: #0A609A;
+}
+
+.titrecate{
+	position: absolute;
+    color: white;
+    top: 1%;
+    font-size: 26px;
+    left: 30%;
+}
+
+.interet{
+	height: 54.9%;
+    width: 100%;
+    position: relative;
+    background-color: white;
+	
+}
+
+ul li {
+	padding:9%;
+	
+}
+
+.fav{
+	width: auto;
+    position: absolute;
+    top: 19%;
+    right: 50%;
+}
+
+.imgfoot1{
+	width: auto;
+    left: 10%;
+    bottom: 3%;
+    position: absolute;
+}
+
+.imgfoot2{
+	width: auto;
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+}
+
+.imgfoot3{
+	width: auto;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+}
+
+
+.imgfoot4{
+	width: auto;
+    bottom: 3%;
+    left: 70%;
+    position: absolute;
+}
+
+.titrefoot{
+	text-align: center;
+    color: white;
+    font-family: roboto bold;
+    padding-top: 46px;
+    font-size: 35px;
+}
+
+.search{
+	width: 100%;
+    position: relative;
+    height: 150px;
+	text-align: center;
+    font-size: 35px;
+	
+}
+
+.casesit{
+	height:23%
+	width:100%;
+	font-size:36px;
+}
+
+.imgmenu{
+	position:absolute;
+	left:0px;
+	height:110px;
+	width:auto;
+}
+
+.defvaleur{
+	width: auto;
+    position: absolute;
+    height: 146px;
+    left: 23%;
+    top: 7%;
+}
+
+.defv{
+	position: absolute;
+    top: 14%;
+    left: 24%;
+    color: white;
+    font-size: 34px;
+}
+
+.dotv{
+	list-style-type: disc;
+    color: white;
+    position: absolute;
+    left: 30%;
+    top: 19%;
+    font-size: 28px;
+}
+
+.compvaleur{
+	position: absolute;
+    height: 146px;
+    right: 24%;
+    width: auto;
+    top: 7%;
+}
+
+.compv{
+	position: absolute;
+    right: 21%;
+    top: 14%;
+    font-size: 34px;
+    color: white;
+}
+
+.dotc{
+	list-style-type: disc;
+    color: white;
+    position: absolute;
+    right: 30%;
+    top: 19%;
+    font-size: 28px;
+}
+
+.titreindex{
+	position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4646AF;
+}
+
+.txtfiche{
+	padding: 53px;
+    width: 700px;
+    color: black;
+	display:list-item;
+    letter-spacing: 0.02em;
+    left: 6%;
+    position: relative;
+}
+
+.ulfiche{
+	width: auto;
+    top: 0;
+    left: 0%;
+    position: relative;
+}

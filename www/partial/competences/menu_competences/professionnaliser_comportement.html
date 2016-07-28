@@ -1,0 +1,46 @@
+<html>
+<link rel="stylesheet" type="text/css" href="../../../css/index.css">
+<script src="../../../js/jquery-2.2.2.min.js"></script>
+<meta charset="UTF-8">
+	<head>
+		<div class="module" >
+				<a href="../competences.html"><span class="arrowl" >&larr;</span></a>
+			<img class="imgsaur" src="../../../img/saur_logo_blanc.png" height="110" width="100%">
+			<h1 class="energie">Professionnaliser ses &eacute;quipes</h1>
+			<div class="imgic">
+				<a href="professionnaliser_definition.html"><img class="defvaleur" src="../../../img/definition.png" height="160" width="160"><p class="defv">D&eacute;finition</p>
+				<a href="professionnaliser_comportement.html"><img class="compvaleur" src="../../../img/comportement_blanc.png" height="160" width="160"><p class="compv">Comp&eacute;tences manag&eacute;riales</p>><li class="dotc"></li></a>
+			</div>
+		</div>
+	</head>
+	<body>
+		<div class="ulfiche">
+			<h3 class="competence_m" >Les comp&eacute;tences manag&eacute;riales n&eacute;cessaires :</h3>
+		</div>	
+			
+		<a href="../fiche_realiser/fiche_savoirrealiser1.html"><div class="case"><p style="text-align: initial;">Savoir r&eacute;aliser une int&eacute;gration apprenante </p></div></a>
+		<div class="case" id="ancre0"><p style="text-align: initial;">Savoir d&eacute;velopper les comp&eacute;tences</p>
+		<a href="../fiche_traiter_err/fiche_savoirtraitererreur.html"><p id="ancre1" style="text-align: initial;display:none;font-size:0.5em;">Traiter une erreur p&eacute;dagogique</p></a>	
+		<a href="../fiche_briefer_collab/fiche_savoirbriefercollaborateur.html"><p id="ancre2" style="text-align: initial;display:none;font-size:0.5em;">Briefer un collaborateur avant une action de jeu</p></a>	
+		<a href="../fiche_realiser_deb/fiche_savoirrealiserdebriefing.html"><p id="ancre3" style="text-align: initial;display:none;font-size:0.5em;">R&eacute;aliser un d&eacute;briefing apprenant</p></a></div>
+		<a href="../fiche_accomp_projet/fiche_savoiraccompagnerprojet.html"><div class="case"><p style="text-align: initial;">Savoir accompagner le projet professionel</p></div></a>
+		<a href="#"><div class="case"><p style="text-align: initial;">Savoir accompagner la formation</p></div></a>
+						
+	</body>
+	<script>
+		$(document).ready(function(){
+	        $('#ancre0').click(function(){
+	            $('#ancre0').css('height', 381);
+	            $('#ancre1').css('display', 'list-item');
+	            $('#ancre2').css('display', 'list-item');
+	            $('#ancre3').css('display', 'list-item');
+	            $('#ancre1').css('margin-left', 100);
+	            $('#ancre2').css('margin-left', 100);
+	            $('#ancre3').css('margin-left', 100);
+	            $('#ancre1').css('padding', 0);
+	            $('#ancre2').css('padding', 0);
+	            $('#ancre3').css('padding', 0);
+	        });
+        })
+	</script>
+</html>

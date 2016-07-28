@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/jniLibs/debug/pushbots-lib-2.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/jniLibs/debug/android-support-v4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

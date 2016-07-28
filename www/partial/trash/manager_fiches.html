@@ -1,0 +1,44 @@
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/index.css">
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<head>
+	<nav>
+  <ul>
+    <a href="../valeur/valeur.html"><img class="imgmenu" src="../../img/valeurs_blanc.png" height="110" width="100%"><li class="limenu">Valeurs</li></a>
+    <a href="competences.html" ><img class="imgmenu" src="../../img/competences_blanc.png" height="110" width="100%" ><li class="limenu">Compétences</li></a>
+    <a href="../situation/situation.html"><img class="imgmenu" src="../../img/situations_blanc.png" height="110" width="100%" ><li class="limenu">Situations</li></a>
+     <a href=""><img class="imgmenu" src="../../img/actus_blanc.png"><li class="limenu">Actualités</li></a>
+	<a href=""><img class="imgmenu" src="../../img/coeur_blanc.png"><li class="limenu">Favoris</li></a>
+  </ul>
+	<div class="wrapper">
+	<div class="module" style="background-color: #0A609A;">
+		<div class="openNav">
+			<div class="icon"></div>
+		</div>
+		<img class="imgsaur" src="../../img/saur_logo_blanc.png" height="110" width="100%">
+		<div class="energie"><h1>Manager la transversalité</h1></div>
+		<div class="imgic">
+			<a href="manager_definition.html"><img class="def" src="../../img/definition.png" height="160" width="160"><p class="defp">Définition</p></a>
+			<a href="manager_comportement.html"><img class="comp" src="../../img/comportement.png" height="160" width="160"><p class="compp">Compétences managériales</p></a>
+			<a href="manager_fiches.html"><img class="fic" src="../../img/ficheoutil_blanc.png" height="160" width="160"><p class="ficp">Fiche outils</p><li class="dot3"></li></a>
+		</div>
+	</div>
+	</head>
+	<body>
+		<a href="fiche_savoirpiloter.html"><div class="case"><p style="text-align: initial;">Savoir piloter un projet transverse </p></div></a>
+		<a href="fiche_savoiranimer.html"><div class="case"><p style="text-align: initial;">Savoir animer un groupe de travail transverse</p></div></a>
+		<a href="fiche_savoigerer.html"><div class="case"><p style="text-align: initial;">Savoir gérer les intéractions avec d'autres services</p></div></a>
+	</body>
+	</div>
+</nav>
+	<script>
+	$(".openNav").click(function() {
+  $("body").toggleClass("navOpen");
+  $("nav").toggleClass("open");
+  $(".wrapper").toggleClass("open");
+  $(this).toggleClass("open");
+});
+
+	</script>
+</html>

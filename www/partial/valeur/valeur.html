@@ -1,0 +1,54 @@
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/index.css">
+<link rel="stylesheet" type="text/css" href="../../css/animsition.min.css">
+<script src="../../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../../js/animsition.min.js"></script>
+<script type="text/javascript" src="../../js/animpages.js"></script>
+	<nav>
+		<ul>
+			<a href="valeur.html"><img class="imgmenu" src="../../img/valeurs_blanc.png" height="110" width="100%"><li class="limenu">Valeurs</li><a/>
+			<a href="../competences/competences.html" ><img class="imgmenu" src="../../img/competences_blanc.png" height="110" width="100%" ><li class="limenu">Compétences</li></a>
+			<a href="../situation/situation.html"><img class="imgmenu" src="../../img/situations_blanc.png" height="110" width="100%" ><li class="limenu">Situations</li></a>
+			<a href="../actu/actu.html"><img class="imgmenu" src="../../img/actus_blanc.png"><li class="limenu">Actualités</li></a>
+			<a href="../favoris/favoris.html"><img class="imgmenu" src="../../img/coeur_blanc.png"><li class="limenu">Favoris</li></a>
+		</ul>
+	</nav>
+	<div class="wrapper">
+		<head>
+		<div class="module">
+			<h1 class="titremodule">Valeurs</h1>
+			<div class="openNav">
+				<div class="icon"></div>
+			</div>
+			<img class="imgsaur" src="../../img/saur_logo_blanc.png" height="110" width="100%">
+			<img class="imgvaleur" src="../../img/valeurs_blanc.png" height="270" width="100%" >
+			<a href="../favoris/favoris.html"><p class="nextLcomp"></p></a>
+			<a href="../competences/competences.html"><p class="nextRcomp"></p></a>
+		</div>
+		</head>
+		<body>
+	        <div class="animsition" data-animsition-in-class="fade-in-right-sm"
+				  data-animsition-in-duration="1000"
+				  data-animsition-out-class="fade-out-right-sm"
+				  data-animsition-out-duration="800">
+			<div class="bando"><p>Je fais vivre ...</p></div>
+			<a href="responsabilite1.html" ><div class="case"><p>LA RESPONSABILITÉ</p></div></a>
+			<a href="transparence1.html" ><div class="case"><p>LA TRANSPARENCE</p></div></a>
+			<a href="proximite1.html" ><div class="case"><p>LA PROXIMITÉ</p></div></a>
+			<a href="solidarite1.html" ><div class="case"><p>LA SOLIDARITÉ</p></div></a>
+			<a href="pragmatisme1.html" ><div class="case"><p>LE PRAGMATISME</p></div></a>
+			<a href="sensduservice1.html" ><div class="case"><p>LE SENS DU SERVICE</p></div></a>
+	        </div>
+		</body>
+	</div>
+	<script>
+	$(".openNav").click(function() {
+	  $("body").toggleClass("navOpen");
+	  $("nav").toggleClass("open");
+	  $(".wrapper").toggleClass("open");
+	  $(this).toggleClass("open");
+	});
+	</script>
+</html>
+

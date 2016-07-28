@@ -1,0 +1,54 @@
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/index.css">
+<link rel="stylesheet" type="text/css" href="../../css/animsition.min.css">
+<script src="../../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../../js/animsition.min.js"></script>
+<script type="text/javascript" src="../../js/animpages.js"></script>
+	<nav>
+		<ul>
+		<a href="../valeur/valeur.html"><img class="imgmenu" src="../../img/valeurs_blanc.png" height="110" width="100%"><li class="limenu">Valeurs</li></a>
+		<a href="competences.html" ><img class="imgmenu" src="../../img/competences_blanc.png" height="110" width="100%" ><li class="limenu">Compétences</li></a>
+		<a href="../situation/situation.html"><img class="imgmenu" src="../../img/situations_blanc.png" height="110" width="100%" ><li class="limenu">Situations</li></a>
+		<a href="../actu/actu.html"><img class="imgmenu" src="../../img/actus_blanc.png"><li class="limenu">Actualités</li></a>
+		<a href="../favoris/favoris.html"><img class="imgmenu" src="../../img/coeur_blanc.png"><li class="limenu">Favoris</li></a>
+		</ul>
+	</nav>
+	<div class="wrapper">
+		<head>
+		<div class="module">
+				<h1 class="titremodule">Compétences</h1>
+				<div class="openNav">
+					<div class="icon"></div>
+				</div>
+			<img class="imgsaur" src="../../img/saur_logo_blanc.png" height="110" width="100%">
+			<img class="imgvaleur" src="../../img/competences_blanc.png" height="270" width="100%">
+			<a href="../valeur/valeur.html"><p class="nextLcomp"></p></a>
+			<a href="../actu/actu.html"><p class="nextRcomp"></p></a>
+		</div>
+		</head>
+		<body>
+	        <div class="animsition" data-animsition-in-class="fade-in-right-sm"
+	 			 data-animsition-in-duration="1000"
+	 			 data-animsition-out-class="fade-out-right-sm"
+	  			data-animsition-out-duration="800">
+				<div class="bando"><p>Je veux...</p></div>
+				<a href="menu_competences/sens_definition.html"><div class="case"><p>DONNER DU SENS</p></div></a>
+				<a href="menu_competences/energie_definition.html"><div class="case"><p>TRANSMETTRE DE L'ÉNERGIE</p></div></a>
+				<a href="menu_competences/developper_definition.html"><div class="case"><p>DÉVELOPPER L'EXIGENCE</p></div></a>
+				<a href="menu_competences/professionnaliser_definition.html"><div class="case"><p>PROFESSIONNALISER SES ÉQUIPES</p></div></a>
+				<a href="menu_competences/manager_definition.html"><div class="case"><p>MANAGER LA TRANSVERSALITÉ</p></div></a>
+				<a href="menu_competences/vivre_definition.html"><div class="case"><p>FAIRE VIVRE LES VALEURS</p></div></a>
+	        </div>
+	     </body>
+	</div>
+	<script>
+	$(".openNav").click(function() {
+	  $("body").toggleClass("navOpen");
+	  $("nav").toggleClass("open");
+	  $(".wrapper").toggleClass("open");
+	  $(this).toggleClass("open");
+	});
+	</script>
+</html>
+

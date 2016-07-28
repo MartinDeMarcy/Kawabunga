@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animsition.min.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/ripple.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/animsition.min.js"></script>
+    <script type="text/javascript" src="js/animpages.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var  stockage = localStorage;
+        $.getJSON("../../json/generated.json").done(function(data){
+            stockage.setItem("data", JSON.stringify(data));
+        });
+    });
+    </script>
+    <title>SAUR</title>
+    </head>
+    <body>  
+        <div class="animsition">
+            <div class="background"><img style="max-width: 100%;height:auto;" src="img/background.jpg" height="2000" width="100%"></div>
+                <div class="bloc1">
+                    <div class="valeur"><a href="partial/valeur/valeur.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000">
+                        <img src="img/Valeurs.png"><p class="titreindex">valeurs</p></a></div>
+                    <div class="competence"><a href="partial/competences/competences.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000"><img style="position: relative;left: 18%;" src="img/competences.png"><p class="titreindex">compétences</p></a></div>
+                <div class="app">
+                </div>
+                    <div class="actualite"><a href="partial/actu/actu.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000"><img src="img/actualites.png"><p class="titreindex">actualités</p></a></div>
+                    <div class="solutions"><a href="partial/situation/situation.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000">
+                    <img src="img/situation.png"><p class="titreindex">situations</p></a></div>
+                    <div class="favoris"><a href="partial/favoris/favoris.html"><img src="img/bookmark.png"><p class="titreindex">favoris</p></a></div>
+					</div>
+		</div>
+	</body>
+</html>
