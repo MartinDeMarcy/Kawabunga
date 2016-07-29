@@ -1,8 +1,9 @@
 <html>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../../../css/index.css">
-<script src="../../../js/jquery-2.2.3.min.js"></script>
-<script src="../../../js/favoris.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/animsition.min.css">
+            <script src="../../../js/jquery-2.2.3.min.js"></script>
+            <script src="../../../js/favoris.js"></script>
 		<head>
 			<div class="bar">
 				<a href="../competences.html"><span class="arrowl">&larr;</span></a>
@@ -16,7 +17,7 @@
 				<a href="../fiche_formaliser_amb/fiche_savoirformaliserambition.html"><p class="nextR"></p></a>
 				<h1 class="titrefiche" id="savoirformaliserplan">Savoir formaliser le plan stratégique</h1>
 			</div>
-			<div class="bookmark"><img class="fav" src="../../../img/fav_vide.png" height="62" width="100%"></div>
+			<div class="bookmark" ><img class="fav" src="../../../img/fav_vide.png" height="62" width="100%"></div>
 			   <div class="interet">
 					<ul class="ulfiche">
 						<li class="txtfiche">Lors du démarrage d’une nouvelle période</li>
@@ -31,4 +32,76 @@
 					<a href="fiche_savoirformaliserplanc.html"><img class="imgfoot4" src="../../../img/1.png" height="117" width="100%"></a>
 				</div>
 		</body>
+<!--        <script>-->
+<!--            var req = new XMLHttpRequest();-->
+<!--            req.open("GET", "../../../../json/generated.json", true);-->
+<!--            req.onreadystatechange = monCode;   // la fonction de prise en charge-->
+<!--            req.send(null);-->
+<!--            -->
+<!--            function monCode()-->
+<!--            {-->
+<!--                if (req.readyState == 4)-->
+<!--                {-->
+<!--                    var doc = eval('(' + req.responseText + ')');-->
+<!--                    $.each(doc, function(index, value){-->
+<!--                        id = $(".titrefiche").attr('id');-->
+<!--                        if (value.index == id)-->
+<!--                        {-->
+<!--                           if (value.fav == true)-->
+<!--                           {-->
+<!--                            $(".fav").toggleClass("fav_plein");-->
+<!--                            $(".bookmark").css("background-color", "white");-->
+<!--                            $(".bookmark").css("border", "1px solid #D3D9E4")-->
+<!--                           }-->
+<!--                           else-->
+<!--                           {-->
+<!--                            $(".fav_plein").toggleClass("fav");-->
+<!--                            $(".bookmark").css("background-color", "#59e09e");-->
+<!--                            $(".bookmark").css("border", "0px")-->
+<!--                           }-->
+<!--                        }-->
+<!--                    });-->
+<!--                }-->
+<!--            }-->
+<!---->
+<!--            $(".bookmark").click(function()  {-->
+<!--                                 var req = new XMLHttpRequest();-->
+<!--                                 req.open("GET", "../../../../json/generated.json", true);-->
+<!--                                 req.onreadystatechange = monClick;   // la fonction de prise en charge-->
+<!--                                 req.send(null);-->
+<!--                                 -->
+<!--                                 function monClick()-->
+<!--                                 {-->
+<!--                                    if (req.readyState == 4)-->
+<!--                                    {-->
+<!--                                    var doc = eval('(' + req.responseText + ')');-->
+<!--                                 console.log();-->
+<!--                                    $.each(doc, function(index, value){-->
+<!--                                        id = $(".titrefiche").attr('id');-->
+<!--                                           -->
+<!--                                        if (value.index == id)-->
+<!--                                        {-->
+<!--                                           console.log(value);-->
+<!--                                           if (value.fav == true)-->
+<!--                                           {-->
+<!--                                           $(".fav_plein").toggleClass("fav");-->
+<!--                                           $(".bookmark").css("background-color", "#59e09e");-->
+<!--                                           $(".bookmark").css("border", "0px")-->
+<!--                                           value.fav = false;-->
+<!--                                           }-->
+<!--                                           else-->
+<!--                                           {-->
+<!--                                           $(".fav").toggleClass("fav_plein");-->
+<!--                                           $(".bookmark").css("background-color", "white");-->
+<!--                                           $(".bookmark").css("border", "1px solid #D3D9E4")-->
+<!--                                           value.fav = true;-->
+<!--                                           }-->
+<!--                                           doc[index] = value;-->
+<!--                                        }-->
+<!--                                           -->
+<!--                                    });-->
+<!--                                    }-->
+<!--                                 }-->
+<!--                });-->
+<!--            </script>-->
 </html>

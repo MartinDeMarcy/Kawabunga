@@ -35,6 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         PushbotsPlugin.initialize("57861f264a9efa68e68b4567");
+        cordova plugin add cordova-plugin-statusbar
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

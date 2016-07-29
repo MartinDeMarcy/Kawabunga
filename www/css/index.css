@@ -513,6 +513,7 @@ ul li {
 
 .fav{
 	width: auto;
+    background: url(../img/fav_vide.png) no-repeat center top;
     height:20px;
     position: absolute;
     top: 19%;
@@ -1100,8 +1101,12 @@ body{
 
 
 .fav_plein{
-  background-image:url(../img/fav.png) no-repeat;
-  
+    width: auto;
+    background: url(../img/fav.png) no-repeat center top;
+    height:20px;
+    position: absolute;
+    top: 19%;
+    right: 50%;
 }
 
 .delete{
@@ -1110,3 +1115,4 @@ body{
   right: 0%;
   margin-right: 20px;
 }
+

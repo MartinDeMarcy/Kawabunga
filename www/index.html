@@ -41,10 +41,27 @@
     <script type="text/javascript" src="js/animpages.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-        var  stockage = localStorage;
-        $.getJSON("../../json/generated.json").done(function(data){
-            stockage.setItem("data", JSON.stringify(data));
-        });
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+                      var req = new XMLHttpRequest();
+                      req.open("GET", "../../../../json/generated.json", true);
+                      req.onreadystatechange = monStart;   // la fonction de prise en charge
+                      req.send(null);
+                      
+                      function monStart()
+                      {
+                        if (req.readyState == 4)
+                        {
+                            var doc = eval('(' + req.responseText + ')');
+                            JSON.parse(doc);
+                            localStorage.setItem("data", doc);
+                        }
+                      $.each(localStorage.getItem("data"), function(index, value) {
+                             console.log(value);
+                             });
+                      
+                      }
+        }
     });
     </script>
     <title>SAUR</title>
