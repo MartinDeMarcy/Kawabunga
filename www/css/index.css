@@ -513,7 +513,6 @@ ul li {
 
 .fav{
 	width: auto;
-    background: url(../img/fav_vide.png) no-repeat center top;
     height:20px;
     position: absolute;
     top: 19%;
