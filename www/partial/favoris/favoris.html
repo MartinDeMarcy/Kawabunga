@@ -24,8 +24,8 @@
                 <div class="icon"></div>
             </div>
             <img class="imgsaur" src="../../img/saur_logo_blanc.png" height="110" width="100%">
-            <img class="imgvaleur" src="../../img/situations_blanc.png" height="270" width="100%" >
-            <a href="../competences/competences.html"><p class="nextLcomp"></p></a>
+            <img class="imgvaleur" src="../../img/coeur_blanc.png" height="270" width="100%" >
+            <a href="../situation/situation.html"><p class="nextLcomp"></p></a>
             <a href="../valeur/valeur.html"><p class="nextRcomp"></p></a>
         </div>
     </head>
@@ -87,52 +87,6 @@
                                           });
                           }
                           }
-        /*
-         function fav()
-                          {
-            
-            $.each(data, function(index, value){
-                if (value.fav == true)
-                {
-                  var  texte = $('<p>').attr({
-                    id: index + 30
-                  });
-                  var div = $('<div>').attr({
-                    class: "case",
-                    id: index + 10
-                  });
-                  var path = "../competences/" + value.path
-                  var ref = $('<a>').attr({
-                    href: path,
-                    id:  index + 20
-                  });
-                   var button = $('<input/>').attr({
-                        type: "button",
-                        class: "delete btn btn-danger pull-right",
-                        id: value.index,
-                        value: 'Supprimer'
-                    });
-                   $("#contacts").append(div);
-                   $("#" + (index + 10).toString()).append(ref);
-                   $("#" + (index + 20).toString()).append(texte);
-                   $("#" + (index + 30).toString()).append(value.title);
-                   $("#" + (index + 10).toString()).append(button); 
-                }
-
-            });
-
-            $(".delete").click(function(){
-            id = $(this).attr("id");
-            data = JSON.parse(localStorage.getItem("data"));
-            $.each(data, function(index, value){
-              if (id == value.index)
-                value.fav = false;
-              data[index] = value;
-            })
-            localStorage.setItem("data", JSON.stringify(data));
-           location.reload();
-          })
-         */
         });
     </script>
     <script>
