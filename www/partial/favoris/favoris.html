@@ -41,53 +41,53 @@
   </nav>
   </body>
   <script type="text/javascript">
-        $(document).ready(function(){
-                          var req = new XMLHttpRequest();
-                          req.open("GET", "../../json/generated.json", true);
-                          req.onreadystatechange = monCode;   // la fonction de prise en charge
-                          req.send(null);
-                          
-                          function monCode() {
-                          if (req.readyState == 4)
-                          {
-                          var doc = eval('(' + req.responseText + ')');
-                          $.each(doc, function(index, value) {
-                                 stock = localStorage.getItem(value.index);
-                                 if (stock == "true")
-                                 {
-                                 var  texte = $('<p>').attr({
-                                                            id: index + 30
-                                                            });
-                                 var div = $('<div>').attr({
-                                                           class: "case",
-                                                           id: index + 10
-                                                           });
-                                 var path = "../competences/" + value.path
-                                 var ref = $('<a>').attr({
-                                                         href: path,
-                                                         id:  index + 20
-                                                         });
-                                 var button = $('<input/>').attr({
-                                                                 type: "button",
-                                                                 class: "delete btn btn-danger pull-right",
-                                                                 id: value.index,
-                                                                 value: 'Supprimer'
-                                                                 });
-                                 $("#contacts").append(div);
-                                 $("#" + (index + 10).toString()).append(ref);
-                                 $("#" + (index + 20).toString()).append(texte);
-                                 $("#" + (index + 30).toString()).append(value.title);
-                                 $("#" + (index + 10).toString()).append(button); 
-                                 }
-                                 });
-                          $(".delete").on('click', function(){
-                                          id = $(this).attr("id");
-                                          localStorage.setItem(id, false);
-                                          location.reload();
-                                          });
-                          }
-                          }
-        });
+      $(document).ready(function(){
+        var req = new XMLHttpRequest();
+        req.open("GET", "../../json/generated.json", true);
+        req.onreadystatechange = monCode;
+        req.send(null);
+    
+        function monCode() {
+          if (req.readyState == 4)
+          {
+          var doc = eval('(' + req.responseText + ')');
+          $.each(doc, function(index, value) {
+           stock = localStorage.getItem(value.index);
+           if (stock == "true")
+           {
+            var  texte = $('<p>').attr({
+              id: index + 30
+            });
+           var div = $('<div>').attr({
+           class: "case",
+           id: index + 10
+           });
+           var path = "../competences/" + value.path
+           var ref = $('<a>').attr({
+           href: path,
+           id:  index + 20
+           });
+           var button = $('<input/>').attr({
+             type: "button",
+             class: "delete btn btn-danger pull-right",
+             id: value.index,
+             value: 'Supprimer'
+            });
+           $("#contacts").append(div);
+           $("#" + (index + 10).toString()).append(ref);
+           $("#" + (index + 20).toString()).append(texte);
+           $("#" + (index + 30).toString()).append(value.title);
+           $("#" + (index + 10).toString()).append(button); 
+           }
+          });
+          $(".delete").on('click', function(){
+            id = $(this).attr("id");
+            localStorage.setItem(id, false);
+            location.reload();
+          });
+          }
+        }
+      });
     </script>
     <script>
     $(".openNav").click(function() {

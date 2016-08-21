@@ -39,41 +39,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/animsition.min.js"></script>
     <script type="text/javascript" src="js/animpages.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            var push = PushNotification.init({ "android": {"senderID": "218350960530"},
-            "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
-
-            push.on('registration', function(data) {
-            });
-
-            push.on('notification', function(data) {
-            });
-
-            push.on('error', function(e) {
-            });
-              var req = new XMLHttpRequest();
-              req.open("GET", "../../../../json/generated.json", true);
-              req.onreadystatechange = monStart;   // la fonction de prise en charge
-              req.send(null);
-              
-              function monStart()
-              {
-                if (req.readyState == 4)
-                {
-                    var doc = eval('(' + req.responseText + ')');
-                    JSON.parse(doc);
-                    localStorage.setItem("data", doc);
-                }
-              $.each(localStorage.getItem("data"), function(index, value) {
-                     });
-              
-              }
-        }
-    });
-    </script>
+    
     <title>SAUR</title>
     </head>
     <body>  
@@ -85,11 +51,51 @@
                     <div class="competence"><a href="partial/competences/competences.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000"><img style="position: relative;left: 18%;" src="img/competences.png"><p class="titreindex">compétences</p></a></div>
                 <div class="app">
                 </div>
-                    <div class="actualite"><a href="https://www.linkedin.com/company/saur"  target="_blank" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000"><img src="img/actualites.png"><p class="titreindex">actualités</p></a></div>
+                    <div class="actualite"><img src="img/actualites.png"><p class="titreindex">actualités</p></div>
                     <div class="solutions"><a href="partial/situation/situation.html" class="animsition-link" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="1000">
                     <img src="img/situation.png"><p class="titreindex">situations</p></a></div>
                     <div class="favoris"><a href="partial/favoris/favoris.html"><img src="img/bookmark.png"><p class="titreindex">favoris</p></a></div>
 					</div>
 		</div>
 	</body>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            $(".actualite").click(function(){
+                cordova.InAppBrowser.open('https://www.linkedin.com/company/saur', '_blank', 'location=yes');
+            });
+            StatusBar.hide();
+            var push = PushNotification.init({ "android": {"senderID": "218350960530"},
+            "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
+
+            push.on('registration', function(data) {
+            });
+
+            push.on('notification', function(data) {
+            });
+
+            push.on('error', function(e) {
+            });
+
+            var req = new XMLHttpRequest();
+            req.open("GET", "../../../../json/generated.json", true);
+            req.onreadystatechange = monStart;   // la fonction de prise en charge
+            req.send(null);
+
+            function monStart()
+            {
+            if (req.readyState == 4)
+            {
+                var doc = eval('(' + req.responseText + ')');
+                JSON.parse(doc);
+                localStorage.setItem("data", doc);
+            }
+            $.each(localStorage.getItem("data"), function(index, value) {
+                 });
+
+            }
+        }
+    });
+    </script>
 </html>
