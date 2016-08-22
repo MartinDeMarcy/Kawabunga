@@ -43,59 +43,38 @@
     $(document).ready(function(){
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
-                      var req = new XMLHttpRequest();
-                      req.open("GET", "../../../../json/generated.json", true);
-                      req.onreadystatechange = monStart;   // la fonction de prise en charge
-                      req.send(null);
-                      
-                      function monStart()
-                      {
-                        if (req.readyState == 4)
-                        {
-                            var doc = eval('(' + req.responseText + ')');
-                            JSON.parse(doc);
-                            localStorage.setItem("data", doc);
-                        }
-                      $.each(localStorage.getItem("data"), function(index, value) {
-                             console.log(value);
-                             });
-                      
-                      }
+            var push = PushNotification.init({ "android": {"senderID": "218350960530"},
+            "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
+
+            push.on('registration', function(data) {
+            });
+
+            push.on('notification', function(data) {
+            });
+
+            push.on('error', function(e) {
+            });
+              var req = new XMLHttpRequest();
+              req.open("GET", "../../../../json/generated.json", true);
+              req.onreadystatechange = monStart;   // la fonction de prise en charge
+              req.send(null);
+              
+              function monStart()
+              {
+                if (req.readyState == 4)
+                {
+                    var doc = eval('(' + req.responseText + ')');
+                    JSON.parse(doc);
+                    localStorage.setItem("data", doc);
+                }
+              $.each(localStorage.getItem("data"), function(index, value) {
+                     });
+              
+              }
         }
     });
-
-document.addEventListener("deviceready",onDeviceReady,false);
-function onDeviceReady(){
-console.log("Device Ready")
-var push = PushNotification.init({ "android": {"senderID": "1081356320189"},
-"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
-
-push.on('registration', function(data) {
-console.log(data.registrationId);
-$("#gcm_id").html(data.registrationId);
-});
-
-push.on('notification', function(data) {
-console.log(data.message);
-alert(data.title+" Message: " +data.message);
-// data.title,
-// data.count,
-// data.sound,
-// data.image,
-// data.additionalData
-});
-
-push.on('error', function(e) {
-console.log(e.message);
-});
-}
-
-
     </script>
     <title>SAUR</title>
-<h1>Push Notification Example</h1>
-Your GCM ID : <br/>
-<p id="gcm_id">1081356320189</p>
     </head>
     <body>  
         <div class="animsition">
