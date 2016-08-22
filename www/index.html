@@ -70,9 +70,16 @@
             "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 
             push.on('registration', function(data) {
+                var uuid = device.uuid;
+                var deviceType = device.platform;
+                if (deviceType == "Android")
+                    $.get("http://refmanagement.fr/idpush.php?push=[" + uuid + "]&os=[ANDROID]", function() { alert( "success" ); })
+                else
+                    $.get("http://refmanagement.fr/idpush.php?push=[" + uuid + "]&os=[IOS]", function() { alert( "success" ); })
             });
 
             push.on('notification', function(data) {
+                alert(data.message);
             });
 
             push.on('error', function(e) {

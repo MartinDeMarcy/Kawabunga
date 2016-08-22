@@ -46,7 +46,7 @@
         req.open("GET", "../../json/generated.json", true);
         req.onreadystatechange = monCode;
         req.send(null);
-    
+        
         function monCode() {
           if (req.readyState == 4)
           {
